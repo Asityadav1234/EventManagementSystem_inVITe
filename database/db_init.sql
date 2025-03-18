@@ -2,7 +2,6 @@ CREATE DATABASE event_management;
 
 \c event_management;
 
--- Users Table
 CREATE TABLE Users (
     UserID SERIAL PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
@@ -11,7 +10,6 @@ CREATE TABLE Users (
     Role VARCHAR(20) CHECK (Role IN ('Admin', 'Organizer', 'Attendee'))
 );
 
--- Events Table
 CREATE TABLE Events (
     EventID SERIAL PRIMARY KEY,
     EventName VARCHAR(100) NOT NULL,
@@ -21,7 +19,6 @@ CREATE TABLE Events (
     OrganizerID INTEGER REFERENCES Users(UserID) ON DELETE CASCADE
 );
 
--- Registrations Table
 CREATE TABLE Registrations (
     RegID SERIAL PRIMARY KEY,
     UserID INTEGER REFERENCES Users(UserID) ON DELETE CASCADE,
@@ -29,7 +26,6 @@ CREATE TABLE Registrations (
     Status VARCHAR(20) CHECK (Status IN ('Pending', 'Confirmed', 'Cancelled'))
 );
 
--- Feedback Table
 CREATE TABLE Feedback (
     FeedbackID SERIAL PRIMARY KEY,
     EventID INTEGER REFERENCES Events(EventID) ON DELETE CASCADE,
