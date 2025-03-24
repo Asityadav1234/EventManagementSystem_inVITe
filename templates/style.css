@@ -1,0 +1,101 @@
+nav {
+    padding: 20px 5px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex; 
+    justify-content: flex-end; 
+    align-items: center; 
+}
+
+a {
+    margin: 0 15px; 
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(147 51 234);
+}
+
+.icon {
+    /* position: fixed;
+    left: 5em; */
+    color: rgb(147 51 234);
+    font-size: x-large;
+    margin-right: 32em; 
+}
+
+.icon:hover {
+    text-decoration: none;
+}
+
+.log-btn {
+    color: white;
+    background-color: rgb(147 51 234);
+    border: none;
+    border-radius: 9px;
+    padding: 0.5em 0.7em;
+    margin-left: 20px; 
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    color: black;
+    border-radius: 5px;
+    border: 1.5px solid rgb(147, 51, 253);
+    padding: 10px;
+    margin: 0 0.5em;
+    width: 25vw;
+}
+
+.search-btn {
+    color: white;
+    background-color: rgb(147, 51, 234);
+    border-radius: 9px;
+    border: none;
+    padding: 0.5em 0.7em;
+    margin: 0 10px;
+}
+
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 15px; Add some space between the dropdown and other nav items
+} */
+.dropbtn{
+    background-color: rgb(4, 1, 6);
+    color: white;
+    border: none;
+    border-radius: 9px;
+    padding: 0.5em 0.7em;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    /* min-width: 120px; */
+    box-shadow: 0px 11px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: white;
+    color: black;
+}
