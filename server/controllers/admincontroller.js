@@ -47,6 +47,14 @@ const adminAuth = async (req, res) => {
 const adminDetails = async (req, res) => {
     const admin_token = req.body.admin_id;
 
+    Admin.find({ admin_id: admin_token }, async function (err, docs) {
+        if (err) {
+            console.log(err);
+            res.status(400).send({ msg: "No such admin exists" });
+        } else {
+            res.status(200).send(docs[0]);
+        }
+    });
     
 };
 
