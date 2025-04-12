@@ -44,7 +44,15 @@ const adminAuth = async (req, res) => {
         }
     });
 };
-require("./models/otpAuth");
-require("./models/user");
-require("./models/admin");
-require("./models/event");
+const adminDetails = async (req, res) => {
+    const admin_token = req.body.admin_id;
+
+    
+};
+
+module.exports = {
+    setAdmin,
+    adminAuth,
+    adminDetails,
+};
+
